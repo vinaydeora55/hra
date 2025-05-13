@@ -1,0 +1,5 @@
+package cancellation_repository;
+
+public interface CancellationRepository {
+
+}

@@ -1,0 +1,5 @@
+package fare_service;
+
+public interface FareService {
+
+}

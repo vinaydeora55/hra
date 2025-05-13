@@ -1,0 +1,5 @@
+package availability_entity;
+
+public class Availability {
+
+}

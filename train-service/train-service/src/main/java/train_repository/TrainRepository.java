@@ -1,0 +1,10 @@
+package train_repository;
+
+
+
+import train_entity.Train;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TrainRepository extends JpaRepository<Train, Long> {
+}

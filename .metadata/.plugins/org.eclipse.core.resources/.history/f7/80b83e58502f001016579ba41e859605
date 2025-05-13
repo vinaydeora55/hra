@@ -1,0 +1,5 @@
+package reservation_repository;
+
+public interface ReservationRepository {
+
+}

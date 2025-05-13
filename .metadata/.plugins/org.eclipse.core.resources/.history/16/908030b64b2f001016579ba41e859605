@@ -1,0 +1,5 @@
+package com.project.train_service;
+
+public class TrainController {
+
+}

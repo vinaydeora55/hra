@@ -1,0 +1,5 @@
+package reservation_service;
+
+public class ReservationServiceImpl {
+
+}

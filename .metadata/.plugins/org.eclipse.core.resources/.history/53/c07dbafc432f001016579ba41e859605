@@ -1,0 +1,33 @@
+spring.application.name=ApiGateway
+
+
+# API Gateway port
+server.port=8080
+
+# Eureka discovery server location
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+# API Gateway routes
+
+spring.cloud.gateway.routes[0].id=user-service
+spring.cloud.gateway.routes[0].uri=lb://user-service
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/user/**
+
+spring.cloud.gateway.routes[1].id=train-service
+spring.cloud.gateway.routes[1].uri=lb://train-service
+spring.cloud.gateway.routes[1].predicates[0]=Path=/api/train/**
+
+spring.cloud.gateway.routes[2].id=reservation-service
+spring.cloud.gateway.routes[2].uri=lb://reservation-service
+spring.cloud.gateway.routes[2].predicates[0]=Path=/api/reservation/**
+
+spring.cloud.gateway.routes[3].id=cancellation-service
+spring.cloud.gateway.routes[3].uri=lb://cancellation-service
+spring.cloud.gateway.routes[3].predicates[0]=Path=/api/cancellation/**
+
+spring.cloud.gateway.routes[4].id=fare-service
+spring.cloud.gateway.routes[4].uri=lb://fare-service
+spring.cloud.gateway.routes[4].predicates[0]=Path=/api/fare/**
+
+spring.cloud.gateway.routes[5].id=admin-service
+spring.cloud.gateway.routes[5].uri=lb://admin-service
+spring.cloud.gateway.routes[5].predicates[0]=Path=/api/admin/**

@@ -1,0 +1,42 @@
+package train_controller;
+
+
+import train_entity.Train;
+import train_service.TrainService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/trains")
+@RequiredArgsConstructor
+public class TrainController {
+
+    private final TrainService trainService;
+
+    @PostMapping
+    public Train saveTrain(@RequestBody Train train) {
+        return trainService.saveTrain(train);
+    }
+
+    @GetMapping
+    public List<Train> getAllTrains() {
+        return trainService.getAllTrains();
+    }
+
+    @GetMapping("/{id}")
+    public Train getTrainById(@PathVariable Long id) {
+        return trainService.getTrainById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Train updateTrain(@PathVariable Long id, @RequestBody Train train) {
+        return trainService.updateTrain(id, train);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteTrain(@PathVariable Long id) {
+        trainService.deleteTrain(id);
+    }
+}

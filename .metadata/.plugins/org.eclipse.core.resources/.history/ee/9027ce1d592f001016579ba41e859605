@@ -1,0 +1,5 @@
+package availability_service;
+
+public interface AvailabilityService {
+
+}

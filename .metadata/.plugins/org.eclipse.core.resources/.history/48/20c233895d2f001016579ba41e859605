@@ -1,0 +1,5 @@
+package train_entity;
+
+public class Train {
+
+}

@@ -1,0 +1,5 @@
+package user_repository;
+
+public interface UserRepository {
+
+}

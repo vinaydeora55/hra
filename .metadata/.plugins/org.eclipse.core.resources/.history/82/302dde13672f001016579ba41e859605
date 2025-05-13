@@ -1,0 +1,15 @@
+package com.project.train_service;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@ComponentScan(basePackages = {"train_controller", "train_entity","train_service","train_repository","custom_exception"})
+public class TrainServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TrainServiceApplication.class, args);
+	}
+
+}
